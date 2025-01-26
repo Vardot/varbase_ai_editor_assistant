@@ -4,7 +4,7 @@ type: Varbase AI
 install:
   - ai_ckeditor
 input:
-  editor_name:
+  ckeditor_machine_name:
     data_type: string
     description: 'The machine name of the CKEditor 5 editor to configure with AI enhancements.'
     prompt:
@@ -14,7 +14,7 @@ input:
     default:
       source: value
       value: 'full_html'
-  ai_ckeditor_index:
+  ckeditor_index:
     data_type: string
     description: 'The position index for the AI Assistant button in the editor toolbar.'
     prompt:
@@ -29,10 +29,10 @@ config:
   import:
     ai_ckeditor: '*'
   actions:
-    editor.editor.${editor_name}:
+    editor.editor.${ckeditor_machine_name}:
       addButtonPluginIntoActiveToolbar:
         button_name: aickeditor
-        button_index: ${ai_ckeditor_index}
+        button_index: ${ckeditor_index}
         plugin_name: ai_ckeditor_ai
         plugin_settings:
           dialog:
