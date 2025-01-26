@@ -28,7 +28,7 @@ config:
   import:
     ai_ckeditor: '*'
   actions:
-    editor.editor.${editor_name}:
+    "editor.editor.${editor_name}":
       addButtonPluginIntoActiveToolbar:
         button_name: aickeditor
         button_index: ${ai_ckeditor_index}
