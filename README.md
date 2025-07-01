@@ -12,5 +12,12 @@ Change directory to `/web` or `/docroot`
 
 Run the Drupal recipe bash script:
 ```
+bash core/scripts/drupal recipe recipes/contrib/varbase_ai_editor_assistant
+```
+
+or 
+
+Run the Drush recipe command:
+```
 drush recipe recipes/contrib/varbase_ai_editor_assistant
 ```
