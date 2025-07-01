@@ -1,6 +1,8 @@
 # Varbase AI Editor Assistant
 
-A recipe to add AI-powered features and an assistant button to a CKEditor 5 text editor
+A recipe to add AI-powered features and an assistant button to a CKEditor 5 text editor.
+
+> Apply the Varbase AI Default recipe, or make sure it has been applied before applying this recipe.
 
 
 Add the recipe using composer:
