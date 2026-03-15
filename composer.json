@@ -1,6 +1,6 @@
 {
   "name": "drupal/varbase_ai_editor_assistant",
-  "description": "A recipe to add AI-powered features and an assistant button to a CKEditor 5 text editor",
+  "description": "A recipe to grant Varbase user roles the permissions needed for the AI-powered CKEditor 5 assistant, as provided by the Drupal CMS AI default recipe",
   "keywords": ["recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "rich editor", "AI Assistant", "AI Editor", "Text format", "CKEditor 5"],
   "type": "drupal-recipe",
   "license": "GPL-2.0-or-later",
@@ -12,9 +12,8 @@
     }
   ],
   "require": {
-    "drupal/core": "~10 || ~11",
-    "vardot/varbase-patches": "*",
-    "drupal/ai": "~1.1.0"
+    "drupal/core": "~11.3.0",
+    "drupal/drupal_cms_ai": "~2"
   },
   "version": "1.0.x-dev"
 }
