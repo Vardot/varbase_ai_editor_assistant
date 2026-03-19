@@ -53,7 +53,7 @@ config:
             width: '900'
             dialog_class: ai-ckeditor-modal
           plugins:
-            ai_automators_ckeditor:
+            ai_agents_ckeditor:
               workflows: {  }
               enabled: true
             ai_ckeditor_completion:
