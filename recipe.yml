@@ -11,6 +11,12 @@ input:
       method: ask
       arguments:
         question: 'Enter the machine name of the CKEditor 5 text editor you want to configure with AI capabilities:'
+    form:
+      '#type': 'textfield'
+      '#title': 'CKEditor 5 text format machine name'
+      '#description': 'Enter the machine name of the CKEditor 5 text format to add the AI Assistant button to (e.g. full_html, basic_html).'
+      '#required': false
+      '#maxlength': 64
     default:
       source: value
       value: 'full_html'
@@ -21,6 +27,12 @@ input:
       method: ask
       arguments:
         question: 'Specify the position index for the AI Assistant button:'
+    form:
+      '#type': 'textfield'
+      '#title': 'AI Assistant button position'
+      '#description': 'The toolbar position index for the AI Assistant button. Use 0 to prepend, -1 to append, or a positive integer for a specific position.'
+      '#required': false
+      '#maxlength': 8
     default:
       source: value
       value: '0'
