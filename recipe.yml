@@ -57,18 +57,21 @@ config:
               workflows: {  }
               enabled: true
             ai_ckeditor_completion:
-              provider: openai__gpt-4o
               enabled: true
+              provider: ''
             ai_ckeditor_help:
               enabled: false
+            ai_ckeditor_modify_prompt:
+              enabled: true
+              provider: ''
             ai_ckeditor_reformat_html:
-              provider: openai__gpt-4o
               enabled: true
+              provider: ''
             ai_ckeditor_spellfix:
-              provider: openai__gpt-4o
               enabled: true
+              provider: ''
             ai_ckeditor_summarize:
-              provider: openai__gpt-4o
+              provider: ''
               enabled: true
             ai_ckeditor_tone:
               enabled: false
