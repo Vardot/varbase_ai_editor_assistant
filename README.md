@@ -2,7 +2,7 @@
 
 # Varbase AI Editor Assistant
 [![pipeline status](https://git.drupalcode.org/project/varbase_ai_editor_assistant/badges/2.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/pipelines)
-[![Varbase AI Editor Assistant](https://img.shields.io/badge/Varbase%20AI%20Editor%20Assistant-2.0.0--alpha2-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/pipelines?ref=2.0.0-alpha2)
+[![Varbase AI Editor Assistant](https://img.shields.io/badge/Varbase%20AI%20Editor%20Assistant-2.0.0--beta1-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/pipelines?ref=2.0.0-beta1)
 [![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
 
 A recipe to grant Varbase user roles the permissions needed for the AI-powered CKEditor 5 assistant, as provided by the Drupal CMS AI default recipe.
