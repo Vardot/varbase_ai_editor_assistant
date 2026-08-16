@@ -2,6 +2,7 @@ name: Varbase AI Editor Assistant
 description: A recipe to grant Varbase user roles the permissions needed for the AI-powered CKEditor 5 assistant, as provided by the Drupal CMS AI default recipe.
 type: Varbase AI
 install:
+  - editor
   - ai_ckeditor
 input:
   ckeditor_machine_name:
