@@ -9,10 +9,15 @@ A recipe to grant Varbase user roles the permissions needed for the AI-powered C
 
 > Apply the Drupal CMS AI default recipe (`drupal/drupal_cms_ai`) before applying this recipe. The core AI editor logic and CKEditor 5 configuration are provided by that recipe; this recipe adds the AI assistant button to a chosen CKEditor 5 editor and grants the required permissions to Varbase's user roles (`site_admin`, `seo_admin`, `content_admin`, `content_editor`).
 
+## Documentation
+
+Read the [Varbase AI Editor Assistant documentation](https://docs.varbase.vardot.com/developers/understanding-varbase/varbase-ai-recipes/varbase-ai-editor-assistant) on the Varbase docs site.
+
+## Installation
 
 Add the recipe using composer:
 ```
-composer require drupal/varbase_ai_editor_assistant:~2.0.0
+composer require drupal/varbase_ai_editor_assistant:~2
 ```
 
 Change directory to `/web` or `/docroot`

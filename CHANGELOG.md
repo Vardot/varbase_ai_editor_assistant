@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Move the documentation to docs.varbase.vardot.com ([#3633019](https://www.drupal.org/i/3633019)).
+
 ## [2.0.0] - 2026-09-06
 ### Changed
 - First stable release of the Varbase AI Editor Assistant recipe on the 2.0.x line, shipped with the Varbase 11.0.0 suite. No functional changes since 2.0.0-rc2.
