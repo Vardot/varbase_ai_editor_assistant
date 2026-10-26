@@ -1,0 +1,9 @@
+{
+  "css": {
+    "ai assistant button": ".ck-toolbar button[data-cke-tooltip-text='AI Assistant']"
+  },
+  "xpath": {
+    "second ai assistant button": "(//*[contains(@class,'ck-toolbar')]//button[@data-cke-tooltip-text='AI Assistant'])[2]",
+    "ai draft": "//*[contains(@class,'ui-dialog')]//*[contains(@class,'ck-editor__editable')][contains(.,'Varbase drafts with AI')]"
+  }
+}

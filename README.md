@@ -33,3 +33,9 @@ Run the Drush recipe command:
 ```
 drush recipe ../recipes/varbase_ai_editor_assistant
 ```
+
+## Automated testing
+
+GitLab CI on [git.drupalcode.org](https://git.drupalcode.org/project/varbase_ai_editor_assistant) (`.gitlab-ci.yml`) builds
+a Varbase 11 site, applies this recipe twice and runs the Varbase functional testing suite in `tests/` on it. See
+[tests/README.md](tests/README.md) to run it against a site of your own.
