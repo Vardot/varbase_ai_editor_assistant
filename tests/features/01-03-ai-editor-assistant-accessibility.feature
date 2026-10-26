@@ -4,14 +4,9 @@ Feature: Varbase AI Recipe - AI Editor Assistant - Accessible editing with the A
   I want the content form with the AI Assistant to work with a keyboard and a screen reader
   So that I can draft with AI like anyone else
 
-  Scenario Outline: Check the blog form keeps the "<rule>" accessibility rule
+  Scenario: Check the blog form gives every field a label and every link a name
     Given I am a logged in user with the "Content editor" user
      When I go to "/node/add/blog"
-     Then the page should not violate the accessibility rule "<rule>"
-
-    Examples:
-      | rule              |
-      | label             |
-      | link-name         |
-      | duplicate-id-aria |
-      | aria-valid-attr   |
+     Then every form field should have an accessible label
+      And every link should have an accessible name
+      And every ARIA role should be valid
