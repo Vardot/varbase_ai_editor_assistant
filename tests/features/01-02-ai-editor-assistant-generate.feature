@@ -4,6 +4,8 @@ Feature: Varbase AI Recipe - AI Editor Assistant - Draft text with AI and keep i
   I want to ask the AI Assistant for text, review it and put it into my content
   So that I start from a draft instead of a blank page
 
+  # Asserts on what the model wrote; Echo only repeats the prompt.
+  @live-ai
   Scenario: Verify an editor drafts a blog post with the AI Assistant and saves it
     CI has no real RAG or vector database hosting: it uses only what the pipeline has and the free amazee.ai
     trial from Drupal CMS AI (thanks to amazee.ai). A short answer comes back within 10 seconds.
