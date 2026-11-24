@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.4] - 2026-11-24
+### Added
+- Add the AI Assistant button to the Drupal Canvas rich text editors (`canvas_html_block` and `canvas_html_inline`), and let the Varbase roles use the `canvas_html_block` text format ([#3638919](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/work_items/3638919)).
+
+### Changed
+- Change the default PHP version to PHP 8.5 in the GitLab CI ([#3638917](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/work_items/3638917)).
+- Fall back to the Echo test provider in CI when amazee.ai is unavailable ([#3638918](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/work_items/3638918)).
+- Update the version badge to `2.0.4` in `README.md`.
+
 ## [2.0.3] - 2026-11-14
 ### Changed
 - Update Node.js to `>= 24.0` in `package.json` and the GitLab CI ([#3635707](https://www.drupal.org/i/3635707)).
@@ -60,7 +69,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Editor Assistant recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.3...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.4...2.0.x
+[2.0.4]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.3...2.0.4
 [2.0.3]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.2...2.0.3
 [2.0.2]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.1...2.0.2
 [2.0.1]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.0...2.0.1
