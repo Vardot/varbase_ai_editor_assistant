@@ -47,7 +47,7 @@ config:
         button_name: aickeditor
         button_index: ${ckeditor_index}
         plugin_name: ai_ckeditor_ai
-        plugin_settings:
+        plugin_settings: &ai_ckeditor_plugin_settings
           dialog:
             autoresize: 'min-width: 600px'
             height: '750'
@@ -78,15 +78,68 @@ config:
               enabled: false
             ai_ckeditor_translate:
               enabled: false
+    # Rich text props edited inside Drupal Canvas use Canvas's own text formats,
+    # not the one chosen above, so they get the same AI button. The leading '?'
+    # makes each action optional: on a site without Canvas it does nothing.
+    #
+    # Core validates an editor after every config action. On Varbase sites
+    # the CKEditor 5 Paste Filter and Editor Advanced Link plugins are enabled
+    # on the Canvas editors without any settings, so the editors fail that
+    # validation and no button can be added. setProperties first writes each
+    # plugin's own defaults, in one action, so the editor is valid before the
+    # button goes in. Canvas forbids editing its editors in the UI, so these
+    # can only ever hold the defaults and nothing is overwritten.
+    '?editor.editor.canvas_html_block':
+      setProperties:
+        settings.plugins.ckeditor5_paste_filter_pasteFilter: &paste_filter_defaults
+          enabled: false
+          filters:
+            - { enabled: true, weight: -10, search: '<o:p><\/o:p>', replace: '' }
+            - { enabled: true, weight: -9, search: '(<[^>]*) (style="[^"]*")', replace: '$1' }
+            - { enabled: true, weight: -8, search: '(<[^>]*) (face="[^"]*")', replace: '$1' }
+            - { enabled: true, weight: -7, search: '(<[^>]*) (class="[^"]*")', replace: '$1' }
+            - { enabled: true, weight: -6, search: '(<[^>]*) (valign="[^"]*")', replace: '$1' }
+            - { enabled: true, weight: -5, search: '<font[^>]*>', replace: '' }
+            - { enabled: true, weight: -4, search: '<\/font>', replace: '' }
+            - { enabled: true, weight: -3, search: '<span[^>]*>', replace: '' }
+            - { enabled: true, weight: -2, search: '<\/span>', replace: '' }
+            - { enabled: true, weight: -1, search: '<p>&nbsp;<\/p>', replace: '' }
+            - { enabled: true, weight: 0, search: '<p><\/p>', replace: '' }
+            - { enabled: true, weight: 1, search: '<b><\/b>', replace: '' }
+            - { enabled: true, weight: 2, search: '<i><\/i>', replace: '' }
+            - { enabled: true, weight: 3, search: '<a name="OLE_LINK[^"]*">(.*?)<\/a>', replace: '$1' }
+        settings.plugins.editor_advanced_link_link: &advanced_link_defaults
+          enabled_attributes: []
+      addButtonPluginIntoActiveToolbar:
+        button_name: aickeditor
+        button_index: -1
+        plugin_name: ai_ckeditor_ai
+        plugin_settings: *ai_ckeditor_plugin_settings
+    '?editor.editor.canvas_html_inline':
+      setProperties:
+        settings.plugins.ckeditor5_paste_filter_pasteFilter: *paste_filter_defaults
+        settings.plugins.editor_advanced_link_link: *advanced_link_defaults
+      addButtonPluginIntoActiveToolbar:
+        button_name: aickeditor
+        button_index: -1
+        plugin_name: ai_ckeditor_ai
+        plugin_settings: *ai_ckeditor_plugin_settings
+    # The AI dialog checks that the editor may use the text format it was
+    # opened from, so editors need Canvas's block format to use AI in Canvas
+    # rich text. Canvas hides its formats from every other format selector.
     user.role.site_admin:
       grantPermissions:
         - 'use ai ckeditor'
+        - 'use text format canvas_html_block'
     user.role.seo_admin:
       grantPermissions:
         - 'use ai ckeditor'
+        - 'use text format canvas_html_block'
     user.role.content_admin:
       grantPermissions:
         - 'use ai ckeditor'
+        - 'use text format canvas_html_block'
     user.role.content_editor:
       grantPermissions:
         - 'use ai ckeditor'
+        - 'use text format canvas_html_block'
