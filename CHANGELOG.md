@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.5] - 2026-11-25
+### Changed
+- Use caret constraints and allow Drupal 11.4 and later and Drupal 12 in Varbase AI Editor Assistant recipe ([#3638922](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/work_items/3638922)).
+- Update the version badge to `2.0.5` in `README.md`.
+
 ## [2.0.4] - 2026-11-24
 ### Added
 - Add the AI Assistant button to the Drupal Canvas rich text editors (`canvas_html_block` and `canvas_html_inline`), and let the Varbase roles use the `canvas_html_block` text format ([#3638919](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/work_items/3638919)).
@@ -69,7 +74,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Editor Assistant recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.4...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.5...2.0.x
+[2.0.5]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.4...2.0.5
 [2.0.4]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.3...2.0.4
 [2.0.3]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.2...2.0.3
 [2.0.2]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/2.0.1...2.0.2
