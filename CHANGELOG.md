@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-11-26
+### Changed
+- Use caret constraints with ^11.4 || ^12.0 to allow Drupal 11.5 and Drupal 12 in Varbase AI Editor Assistant recipe ([#3638924](https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/work_items/3638924)).
+
 ## [1.0.3] - 2026-11-23
 ### Changed
 - Change the default PHP version to PHP 8.5 in the GitLab CI ([#3638917](https://www.drupal.org/i/3638917)).
@@ -27,7 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase AI Editor Assistant recipe: installs AI CKEditor and adds the AI Assistant button to a CKEditor 5 text editor, asking for the editor machine name (default `full_html`) and the button position. See [#3502278](https://www.drupal.org/i/3502278).
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/1.0.3...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/1.0.4...1.0.x
+[1.0.4]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/1.0.3...1.0.4
 [1.0.3]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/1.0.2...1.0.3
 [1.0.2]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/1.0.1...1.0.2
 [1.0.1]: https://git.drupalcode.org/project/varbase_ai_editor_assistant/-/compare/1.0.0...1.0.1
